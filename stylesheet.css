@@ -1,0 +1,174 @@
+html {
+    height:100vh;
+    width:100vw;
+    line-height: normal!important;
+
+}
+
+body {
+    height:100vh;
+    width:100vw;
+    font-family: "Arial", "メイリオ";
+
+}
+
+header {
+    height: 160px;
+    width: 100vw;
+    position: fixed;
+    background-color:#fff;
+    z-index: 10;
+    border-bottom: 1px solid #000;
+
+}
+
+
+
+.container {
+    padding-top: 180px;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* padding-left: 10%; */
+    height: 100%;
+    width: 100%;
+    display:flex;
+}
+
+.right {
+    height:auto;
+    width:70%;
+    /* padding-left: 50px; */
+    right: 0;
+    overflow-y: scroll;
+
+}
+
+.left{
+    height:auto;
+    width:30%;
+    /* padding-left: 50px; */
+    left: 0;
+
+}
+
+.logo {
+    font-size: 30px;
+    padding:20px;
+    font-weight: bold;
+}
+
+/* .jp {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+} */
+
+.eng {
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.corn {
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+/* .content {
+    width: calc(100% / 2);
+} */
+
+.title {
+    text-align: left;
+    width: 100%;
+    padding-left: 50px;
+    display:flex;
+}
+
+
+.button {
+    margin-bottom: 80px;
+}
+
+.button p {
+    margin-left: 50px;
+}
+
+.button h1 {
+    font-size: 20px;
+    width:70%;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #dcdcdc;
+    /* border-left: solid 8px #3aae36; */
+    padding-left:10px;
+    color:#000;
+    /* border-bottom: 3px solid #3aae36; */
+}
+
+.profile {
+    margin-bottom: 30px;
+}
+
+.profile h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* border-left: solid 8px rgb(56, 245, 129);左線 */
+    /* padding-left:10px; */
+    color:#3aae36;
+
+}
+
+.profile p {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 780px) {
+    html {
+        font-size: 12px;
+    }
+    .title {
+        display:none;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    .container {
+        flex:none;
+        display:block;
+        width:100%;
+        padding-top: 120px;
+    }
+    .right{
+        width: 100%;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .button h1 {
+        font-size:12px;
+        width: 100%;
+    }
+
+    .profile h1 {
+        font-size:12px;
+        width: 100%;
+    }
+
+    .container img {
+        width:100%;
+    }
+}
