@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヤマト運輸 模写</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+
+</head>
+
+
+<body>
+
+
+
+    <div class="top_title">
+        <img src="images/com_logo01.png">
+    </div>
+
+
+        <div class="container" id="bg">
+
+            <div class="right_box">
+                <div class="right">
+                    <div>
+                        <div class="black">荷物のお問い合わせ</div>
+                        <p>ログイン</p>
+                        <div class="black">クロネコメンバーズ</div>
+                        <div class="crear">ヤマトビジネスメンバーズ</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="left">
+                <div class="home_content">
+                    <p class="news">重要なお知らせ</p>
+                    <div class="info">
+                        
+
+
+
+                    </div>
+
+
+                    <ul class="box">
+                        <div class="side_gold">
+                            <div id="gold1"></div>
+                            <div id="gold2"></div>
+                            <div id="gold3"></div>
+                            <div id="gold4"></div>
+                        </div>
+
+
+                        <ui class="rink" id="bg1">
+                            <div class="item_1">
+                                <img class="icon" src="images/index_gnav_ic01.png" alt="">
+                            </div>
+                            <div class="item_2">
+                                <span>個人のお客さま</span>
+                            </div>
+                            <div class="item_3">
+                                <img class="arrow" src="images/index_arrow_ic01.png" alt="">
+                            </div>
+                        </ui>
+
+                        <ui class="rink" id="bg2">
+                            <div class="item_1">
+                                <img class="icon" src="images/index_gnav_ic02.png" alt="">
+                            </div>
+                            <div class="item_2">
+                                <span>法人のお客さま</span>
+                            </div>
+                            <div class="item_3">
+                                <img class="arrow" src="images/index_arrow_ic01.png" alt="">
+                            </div>
+                        </ui>
+
+                        <ui class="rink" id="bg3">
+                            <div class="item_1">
+                                <img class="icon" src="images/index_gnav_ic03.png" alt="">
+                            </div>
+                            <div class="item_2">
+                                <span>企業サイト</span>
+                            </div>
+                            <div class="item_3">
+                                <img class="arrow" src="images/index_arrow_ic01.png" alt="">
+                            </div>
+                        </ui>
+
+                        <ui class="rink" id="bg4">
+                            <div class="item_1">
+                                <img class="icon" src="images/index_gnav_ic04.png" alt="">
+                            </div>
+                            <div class="item_2">
+                                <span>採用情報</span>
+                            </div>
+                            <div class="item_3">
+                                <img class="arrow" src="images/index_arrow_ic01.png" alt="">
+                            </div>
+                        </ui>
+
+
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <p>© Yamato Transport Co., Ltd. All Rights Reserved.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+        <!--　classがいうこときかない　jsファイル内に置くと画像が読み込めなくなる　-->
+        <script>
+
+            const bg1 = document.getElementById('bg1');
+            const bg2 = document.getElementById('bg2');
+            const bg3 = document.getElementById('bg3');
+            const bg4 = document.getElementById('bg4');
+            const bg = document.getElementById('bg');
+
+            const gold1 = document.getElementById('gold1');
+            const gold2 = document.getElementById('gold2');
+            const gold3 = document.getElementById('gold3');
+            const gold4 = document.getElementById('gold4');
+
+
+
+            bg1.addEventListener('mousemove', function () {
+                bg.style.backgroundImage = 'url(images/index_main01_1.jpg)';
+                gold1.style.backgroundColor = 'gold';
+                bg1.addEventListener('mouseleave', function () {
+                    bg.style.backgroundImage = 'url(images/index_main02_1.jpg)';
+                    gold1.style.backgroundColor = "";
+                });
+            });
+
+            bg2.addEventListener('mousemove', function () {
+                bg.style.backgroundImage = 'url(images/index_main02_1.jpg)';
+                gold2.style.backgroundColor = 'gold';
+                bg2.addEventListener('mouseleave', function () {
+                    bg.style.backgroundImage = 'url(images/index_main02_1.jpg)';
+                    gold2.style.backgroundColor = "";
+                });
+            });
+
+            bg3.addEventListener('mousemove', function () {
+                bg.style.backgroundImage = 'url(images/index_main03_1.jpg)';
+                gold3.style.backgroundColor = 'gold';
+                bg3.addEventListener('mouseleave', function () {
+                    bg.style.backgroundImage = 'url(images/index_main02_1.jpg)';
+                    gold3.style.backgroundColor = "";
+                });
+            });
+
+            bg4.addEventListener('mousemove', function () {
+                bg.style.backgroundImage = 'url(images/index_main04.jpg)';
+                gold4.style.backgroundColor = 'gold';
+                bg4.addEventListener('mouseleave', function () {
+                    bg.style.backgroundImage = 'url(images/index_main02_1.jpg)';
+                    gold4.style.backgroundColor = "";
+                });
+            });
+
+            const BgImages = [
+                'images/index_main01_1.jpg',
+                'images/index_main02_1.jpg',
+            'images/index_main03_1.jpg',
+            'images/index_main04.jpg'
+            ];
+
+            const container = document.querySelector('.container');
+
+            let i = 0;
+
+            function change_main_vidual_background() {
+                if (i === BgImages.length) {
+                    i = 0;
+                };
+                container.style.backgroundImage = 'url(' + BgImages[i] + ')';
+                i++;
+            }
+
+
+            window.setInterval(change_main_vidual_background, 5000);
+
+    </script>
+
+</body>
+<?php get_footer(); ?>

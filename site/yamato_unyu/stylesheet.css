@@ -1,0 +1,258 @@
+/* ----------- 本家さんみたいにモニタサイズより下にスクロールできないようにしたい ------------- */
+
+html {
+    height:100vh;
+    width:100vw;
+
+}
+
+body {
+    height:100vh;
+    width:100vw;
+    font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+/* ----------- タイトル：次の運び方をつくる ※本家さんは元画像よりも縮小されてる------------- */
+
+.top_title {
+    height: 89.8px;
+    margin: 5px 5px 5px 20px ;
+
+}
+
+
+/* ----------- 全体 ------------- */
+
+.container {
+    height: calc(100vh - 89.9px);
+    width: 100vw;
+    background-repeat: no-repeat fixed;
+    background-size: cover;
+    transition: 1s;
+}
+
+
+/* ----------- 左側　------------- */
+
+.left {
+    width: 480px;
+    height:100%;
+    background: rgba(0,0,0,0.6); /* rgba 背景だけ*/
+    color:#FFF;
+
+} 
+
+
+/* ----------- 左側：重要なお知らせのpだけ ------------- */
+.news {
+    background-color: #B40000;
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    margin:30px;
+}
+
+/* ----------- 左側：重要なお知らせのdiv ------------- */
+
+.info {
+    height: 10%;
+    margin:0 10px 0 30px;
+    font-size: 16px;
+    overflow: scroll;
+}
+
+/* ----------- 左側：重要なお知らせの項目の▶︎を表記するためにググってコピペしただけ ------------- */
+
+.list_triangle {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.list_triangle > li {
+    position: relative;
+    padding: 0px 0px 0px 1em;
+}
+.list_triangle > li::before {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border: 0.5em solid transparent;
+    border-left: 0.6em solid #FFF;
+    content: "";
+}
+
+/* ----------- 左側：メニューリスト　※border-topなので最下部のラインが入らない ------------- */
+
+.box {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: background-image 0.3s;
+    padding-left: 0px;
+}
+
+.side_gold {
+    position: absolute;
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* ----------- 同じ内容はまとめたい ------------- */
+
+#gold1, #gold2, #gold3, #gold4 {
+    width: 15px;
+    height: 100px;
+}
+
+/*#gold2 {
+    width: 15px;
+    height: 100px;
+}
+
+#gold3 {
+    width: 15px;
+    height: 100px;
+}
+
+#gold4 {
+    width: 15px;
+    height: 100px;
+}*/
+
+.rink {
+    border-top: solid 1px #FFF;
+    width: 90%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center; /*上下中央揃えにならない*/
+    margin-left: 30px;
+}
+
+    .rink:hover { /* スペースを無くして:hoverにすると全体に効くらしい */
+        opacity: 0.5;
+    }
+
+
+
+.item_1 {
+	position:absolute;
+	left:20px;
+	top:20px;
+ }
+
+ .item_2 {
+	position:absolute;
+	left:60px;
+	top:20px;
+    font-size: 22px;
+
+ }
+
+ .item_3 {
+	position:absolute;
+	right:10px;
+	top:20px;
+ }
+
+
+/* ----------- 左側：メニューリストの左アイコン ------------- */
+
+.icon {
+    max-width: 60%;
+    height: auto;
+    align-items: center;
+    
+}
+
+span {
+
+    text-align: left;
+}
+
+
+/* ----------- 左側：@yamato transport co.ltd ※本家さんみたいに最下部でも縦中央にしたい------------- */
+
+.footer {
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex!important;
+    z-index: 1000;
+    position: absolute!important;
+    bottom: 0!important;
+    left: 0!important;
+    align-items: center!important;
+    width: 480px!important;
+    height: 70px!important;
+    padding: 0 30px!important;
+    color: #fff!important;
+}
+
+
+
+/* ----------- 右側のbox ※配置位置がわからない ------------- */
+
+
+.right_box {
+    position:absolute;
+    top:400px;
+    right:0;
+}
+
+.right {
+    height:250px;
+    width:250px;
+    background-color: gold;
+    flex-direction: row;
+    padding-top: 15px;    
+}
+
+
+.right p {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    width:200px;
+    /* border-top: solid 1px #000; */
+
+}
+
+
+.black{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 5px;
+    width:200px;
+    height:30px;
+    background-color: #000;
+    color:#FFF;
+    border-radius: 5px; 
+    text-align: center;
+    position:relative;
+}
+
+
+.crear{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 5px;
+    width:200px;
+    height:30px;
+
+    color:#000;
+    border: 2px solid;
+    border-radius: 5px; 
+    border-color: black;
+    text-align: center;　/* よくわからない*/
+}
