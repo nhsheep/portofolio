@@ -1,0 +1,84 @@
+/* ----------- 本家さんみたいにモニタサイズより下にスクロールできないようにしたい ------------- */
+
+html {
+    height:100vh;
+    width:100vw;
+
+}
+
+body {
+    height:100vh;
+    width:100vw;
+    font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+/* ----------- タイトル：次の運び方をつくる ※本家さんは元画像よりも縮小されてる------------- */
+
+.top_title {
+    height: 89.8px;
+    margin: 5px 5px 5px 20px ;
+
+}
+
+
+/* ----------- 全体 ------------- */
+
+.container {
+    height: calc(100vh - 89.9px);
+    width: 100vw;
+    background-repeat: no-repeat fixed;
+    background-size: cover;
+    transition: 1s;
+}
+
+
+.sa {
+    opacity: 0;
+    transition: all .5s ease;
+  }
+   
+  .sa.show {
+    opacity: 1;
+    transform: none;
+  }
+   
+  .sa--lr {
+    transform: translate(-100px, 0);
+    text-align: right;
+  }
+   
+  .sa--rl {
+    transform: translate(100px, 0);
+  }
+   
+  .sa--up {
+    transform: translate(0, 100px);
+  }
+   
+  .sa--down {
+    transform: translate(0, -100px);
+  }
+   
+  .sa--scaleUp {
+    transform: scale(.5);
+  }
+   
+  .sa--scaleDown {
+    transform: scale(1.5);
+    text-align: center;
+  }
+   
+  .sa--rotateL {
+    transform: rotate(180deg);
+  }
+   
+  .sa--rotateR {
+    transform: rotate(-180deg);
+  }
+
+  .main_photo {
+      width: 50%;
+      height: auto;
+  }

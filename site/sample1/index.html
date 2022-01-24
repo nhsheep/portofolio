@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヤマト運輸 模写</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/commmon.css"/>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+</head>
+
+
+<body>
+
+
+
+    <div class="top_title">
+        <img src="images/com_logo01.png">
+    </div>
+
+
+        <div class="container" id="bg">
+            <section>
+                <div class="sa sa--lr"><img src="images/index_main01_sp_1.jpeg"></div>
+                <div class="sa sa--scaleUp"><img src="images/index_main02_sp_1.jpeg"></div>
+                <div class="sa sa--scaleDown"><img src="images/index_main03_sp_1.jpeg"></div>
+                <!-- <div class="sa sa--down">要素12</div>
+                <div class="sa sa--scaleUp">要素13</div>
+                <div class="sa sa--scaleDown">要素14</div>
+                <div class="sa sa--rotateL">要素15</div>
+                <div class="sa sa--rotateR">要素16</div> -->
+              </section>
+              
+
+
+        </div>
+
+        <script>
+        var scrollAnimationElm = document.querySelectorAll('.sa');
+        var scrollAnimationFunc = function() {
+          for(var i = 0; i < scrollAnimationElm.length; i++) {
+            var triggerMargin = 300;
+            if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+              scrollAnimationElm[i].classList.add('show');
+            }
+          }
+        }
+        window.addEventListener('load', scrollAnimationFunc);
+        window.addEventListener('scroll', scrollAnimationFunc);
+</script>
+
+</body>
+</html>
