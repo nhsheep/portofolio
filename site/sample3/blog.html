@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script src="js/toggle_slick.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kosugi+Maru&family=Mochiy+Pop+One&family=Yuji+Syuku&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="header_">
+            <div class="header_bar">
+            
+                <div class="header_title">
+                    title
+                </div>
+                <div class="nav-wrap">
+                    <div class="scroll-nav">
+                        <ul>
+                            <li><a href="index.html">top</a></li>
+                            <li><a href="blog.html">blog</a></li>
+                            <li><a href="">botton3</a></li>
+                            <li><a href="">botton4</a></li>
+                            <li><a href="">contact</a></li>
+                        </ul>
+                    </div>
+
+            </div>
+        </div>
+        
+        
+        
+        
+        <div id="navArea">
+        
+          <nav>
+            <div class="inner">
+              <ul>
+                <li><a href="index.html">top</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="">botton3</a></li>
+                <li><a href="">botton4</a></li>
+                <li><a href="">contact</a></li>
+              </ul>
+        
+            </div>
+          </nav>
+        
+          <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        
+          <div id="mask"></div>
+        
+        </div>
+        
+        
+        
+        </header>
+
+
+<div class="container">
+
+
+    <div class="main_container">
+
+            <div class="cat_blog">
+
+                <div class="day">
+                    2023.01.01
+                </div>
+        
+                <div class="post_title">
+                    タイトル
+                </div>
+
+                <div class="post">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </div>       
+
+                <div class="eye_chatch">
+                    <div class="eye_chatch_img">
+                        <img src="img/sample.png">
+                    </div>
+                </div>
+
+
+            </div>
+    </div>
+
+
+
+        <div class="side_archive_menu">
+
+            <ul class="accordion">
+                <li>
+                  <p><span class="acv_open"></span>YYYY年 (n)</p>
+                  <ul>
+                    <li><a href="">YYYY年MM月</a> (n)</li>
+                    <li><a href="">YYYY年MM月</a> (n)</li>
+                    <!-- 略 -->
+                    <li><a href="">YYYY年MM月</a> (n)</li>
+                  </ul>
+                </li>
+                <li>
+                  <p><span></span>YYYY年 (n)</p>
+                  <ul class="hide">
+                    <li><a href="">YYYY年MM月</a> (n)</li>
+                    <li><a href="">YYYY年MM月</a> (n)</li>
+                    <li><a href="">YYYY年MM月</a> (n)</li>
+                    <!-- 略 -->
+                    <li><a href="">YYYY年MM月</a> (n)</li>
+                  </ul>
+                </li>
+                <!-- 一番古い投稿日まで続く -->
+              </ul>
+
+        </div>
+
+</div>
+
+
+
+
+
+
+<script>
+    (function($) {
+      var $nav   = $('#navArea');
+      var $btn   = $('.toggle_btn');
+      var $mask  = $('#mask');
+      var open   = 'open'; // class
+      // menu open close
+      $btn.on( 'click', function() {
+        if ( ! $nav.hasClass( open ) ) {
+          $nav.addClass( open );
+        } else {
+          $nav.removeClass( open );
+        }
+      });
+      // mask close
+      $mask.on('click', function() {
+        $nav.removeClass( open );
+      });
+    } )(jQuery);
+    
+    </script>
+    
+    <script>
+    
+    jQuery(function($) {
+      $('.accordion p').click(function(){
+        if($(this).next('ul').is(':visible')) { //既に開いている場所なら
+          $(this).next('ul').slideUp(300); //閉じる
+          $(this).children('span').removeClass('acv_open'); //.acv_openを削除
+        } else { //閉じている場所なら
+          $('.accordion ul').slideUp(); //全部閉じる
+          $('.accordion').find('span').removeClass('acv_open'); //.acv_open全削除
+          $(this).next('ul').slideDown(300); //開く
+          $(this).children('span').addClass('acv_open'); //.acv_open付加
+        }
+      });
+    });
+    </script>
+
+
+</body>
+
+</html>
+
