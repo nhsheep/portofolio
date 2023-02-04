@@ -1,0 +1,457 @@
+html {
+    height:100vh;
+    width:100vw;
+    line-height: normal!important;
+    font-size: 14px;
+
+}
+
+body {
+    height:auto;
+    width:100%;
+    font-family: "Arial", "メイリオ";
+    margin: 0;
+}
+
+header {
+    height:auto;
+    width:100%;
+}
+
+.header_ {
+    height:6em;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+
+    /* top: 0; */
+    left: 0;
+    /* margin-top: 20px; */
+    background-color: #fff;;
+}
+
+.header_bar {
+    height:100%;
+    width:100%;
+    display:table;
+    text-align:  center;  
+}
+
+.header_title {
+    height:40%;
+    width:100%;
+    font-size: 1.5em;
+
+    /* padding-left:0.5em; */
+    /* text-align: center; */
+}
+
+.header_botton {
+    height:30%;
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    background-color:rgb(206, 204, 204);
+
+}
+
+
+.nav-wrap {
+  position: absolute;
+  bottom:0;
+  width: 100vw;
+  text-align: center;
+  font-size:0.8em;
+  height:auto;
+}
+
+.scroll-nav {
+  width: 100%;
+  background: #31a9ee;
+  /* メニューの背景色 */
+  overflow-x: auto;
+  /* 慣性スクロール */
+  -webkit-overflow-scrolling: touch;
+
+}
+.scroll-nav ul {
+   max-width: 1060px;/* メニューの最大幅 */
+   min-width: 600px; /* メニューの最小幅 */
+  height: 2em;
+  line-height: 2em;
+  margin: 0 auto;
+  list-style: none;
+  /* padding-right: 25px; 右側の固定分余白を空ける */
+}
+.scroll-nav ul li {
+  display: inline-block;
+  width: 110px; /* メニューの個別の幅 */
+  text-align: center;
+}
+.scroll-nav ul li:hover {
+  background: rgb(158, 157, 157); /* マウスホバー時の背景色 */
+}
+.scroll-nav ul li a {
+  display: inline-block;
+  color: #fff; /* メニューの文字色 */
+  text-decoration: none;
+}
+/* スクロールバーを非表示にする */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+.top_page {
+
+    height:100%;
+    width:100%;
+}
+
+.day {
+    color:black;
+    font-size: 0.8em;
+}
+
+.post_title {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    margin:1em;
+    color: #494949;/*文字色*/
+    background: transparent;/*背景透明に*/
+    border-left: solid 7px  #31a9ee;
+
+}
+
+.post {
+    padding: 0 0 2em 1em;
+    /* height:100%; */
+}
+
+.container{
+    width:100vw;
+    height: auto;
+    display: flex;
+}
+
+.main_container {
+    padding: 5em 5em 1em 5em;
+    height:100%;
+    width:70%;
+    /* background-color: azure; */
+    font-size: 1em;
+    overflow:scroll;
+}
+.side_archive_menu {
+    height:100%;
+    width:30%;
+    right:0;
+    /* width:auto; */
+    padding: 10em 0 1em 1em;
+    font-size: 1em;
+    position: fixed;
+    /* text-align: center; */
+}
+
+.cat_container {
+    width:100%;
+    padding: 10em;
+
+}
+
+.cat_flex {
+    padding-top: 3em;
+    display:flex;
+    width:100%;
+}
+
+.cat_blog {
+    width:100%;
+    padding-top:3em;
+}
+/* 
+.cat_column {
+    width:50%;
+} */
+
+.cat_title {
+    font-size: 1em;
+    width:10em;
+    /* text-align: center; */
+    margin-bottom: 2em;
+    border-bottom: 0.5px solid rgb(206, 204, 204);
+    padding: 5px;
+}
+
+.cat_post_title {
+    font-weight: bold;
+    font-size: 1em;
+    color: #494949;/*文字色*/
+
+}
+
+.eye_chatch_img img{
+  width:50%;
+  height: auto;
+  margin-left:5em;
+
+}
+
+.child {
+  display: none;
+}
+
+@media screen and (min-width:600px) {
+    #navArea{
+        display:none;
+    } 
+
+  }
+
+
+  @media screen and (max-width: 600px) {
+
+    .header_botton{
+        display:none;
+    } 
+
+
+    .cat_container {
+        width:100%;
+        padding: 5em 2em 2em 2em;
+    
+    }
+
+    .cat_flex {
+        display:block;
+        width:100%;
+    }
+
+    .header_ {
+        height:2em;
+        width: 100%;
+        position: fixed;
+        /* z-index: 999; */
+        left: 0;
+        /* background-color:rgb(206, 204, 204); */
+    }
+
+    .main_container {
+      padding: 5em 2em 3em 1em;
+    }
+
+    .container{
+      width:100vw;
+      height: auto;
+      flex:none;
+      display:flex;
+      }
+
+    .nav-wrap {
+      display:none;
+    }
+
+    .header_bar {
+      background: #31a9ee;
+      color:#fff;
+    }
+  }
+
+ 
+
+
+  /* ハンバーガーメニューその２ */
+
+
+  nav {
+    display: block;
+    position: fixed;
+    top: 4em;
+    left: -300px;
+    bottom: 0;
+    width: 300px;
+    background: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all .5s;
+    z-index: 3;
+    opacity: 0;
+  }
+  .open nav {
+    left: 0;
+    opacity: 1;
+  }
+  nav .inner {
+    padding: 4em 1em 1em 1em;
+  }
+  nav .inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav .inner ul li {
+    position: relative;
+    margin: 0;
+    border-bottom: 1px solid #333;
+  }
+  nav .inner ul li a {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    padding: 1em;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  nav .inner ul li a:hover {
+    background: #e4e4e4;
+  }
+  @media screen and (max-width: 767px) {
+    nav {
+      left: -220px;
+      width: 220px;
+    }
+  }
+  /*============
+  .toggle_btn
+  =============*/
+  .toggle_btn {
+    display: block;
+    position: fixed;
+    top: 3em;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all .5s;
+  }
+  .toggle_btn span:nth-child(1) {
+    top: 4px;
+  }
+  .toggle_btn span:nth-child(2) {
+    top: 14px;
+  }
+  .toggle_btn span:nth-child(3) {
+    bottom: 4px;
+  }
+  .open .toggle_btn span {
+    background-color: #fff;
+  }
+  .open .toggle_btn span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+  }
+  .open .toggle_btn span:nth-child(2) {
+    opacity: 0;
+  }
+  .open .toggle_btn span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+  }
+  /*============
+  #mask
+  =============*/
+  #mask {
+    display: none;
+    transition: all .5s;
+  }
+  .open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  /* アコーディオン　アーカイブ　テスト */
+
+.accordion {
+  top:0;
+}
+
+  ul.accordion ul{ /* アコーディオン部 */
+    margin: 5px 0 30px 15px;
+  }
+  ul.accordion ul.hide{ /* アコーディオン非表示 */
+    display: none;
+  }
+  ul.accordion li{ /* リセット */
+    list-style: none;
+    background: none;
+    padding: 0;
+  }
+  ul.accordion li p{ /* リセット */
+    margin: 0;
+  }
+  ul.accordion li p span{ /* アイコン背景 */
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    background: #09c;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-right: 5px;
+    vertical-align: -2px;
+  }
+  ul.accordion li p span:before{ /* アイコン横棒 */
+    content:'';
+    height: 1px;
+    width: 9px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 7px;
+    left: 3px;
+  }
+  ul.accordion li p span:after{ /* アイコン縦棒（閉じてるとき） */
+    content: '';
+    height: 9px;
+    width: 1px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 3px;
+    left: 7px;
+  }
+  ul.accordion li p span.acv_open:after{ /* アイコン縦棒なし（開いてるとき） */
+    height: 0;
+    width: 0;
+  }
+  ul.accordion ul li{ /* アーカイブリスト */
+    margin-left: 15px;
+    position: relative;
+  }
+  ul.accordion ul li::after{ /* アーカイブリストマーク */
+    display: block;
+    content: '';
+    position: absolute;
+    top: .2em;
+    left: -1em;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
